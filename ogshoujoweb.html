@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="https://file.garden/aXTkw7hiK3vn4ais/food_1.webp">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://luckyatoll.nekoweb.org/sanriowebring.css" rel="stylesheet" type="text/css" media="all"/>
+    we<link rel="stylesheet" href="https://purplehello98.neocities.org/kpopring/onionring.css">
+  
+    <title>ShoujoWeb</title>
+
+    <style>
+        /* ——————— Selection ——————— */
+        ::-moz-selection {
+          color: #ff91c0;
+          background: #Fff8b2;
+        }
+    
+        ::selection {
+          color: #ff91c0;
+          background: #Fff8b2;
+        }
+    
+    
+        :root {
+          --bg-panel: #F4DFFC;
+          --bg-box: #ffffff;
+          --h2-grad: linear-gradient(180deg, #ff9ccc, #fundf5fa2);
+          --border: hotpink;
+          --text-main: purple;
+        }
+    
+        * {
+          box-sizing: border-box;
+          font-family: "MS Gothic", sans-serif;
+        }
+    
+    
+    
+        /* ——————— Layout ——————— */
+        body {
+          margin: 0;
+          background-image: url(https://64.media.tumblr.com/6e128db49a3c4179aeed1ad4d482aa41/c281c67d4e9cd71d-0a/s1280x1920/526e7a39a7723f17a2bd47108c04269d1c38d3f2.jpg);
+          background-size:200px;
+          image-rendering: pixelated;
+          color: var(--text-main);
+          cursor:url(http://media.tumblr.com/c5b03451d2460e44b9f30e7b1451b9d6/tumblr_inline_mo87x4TTzq1qz4rgp.gif), url(http://media.tumblr.com/c5b03451d2460e44b9f30e7b1451b9d6/tumblr_inline_mo87x4TsTzq1qz4rgp.gif), auto;
+          justify-content: center;
+          display: flex;             
+          align-items: flex-start;  
+    
+        }
+    
+        .floating-sidebar {
+          position: fixed;
+          top: 100px; 
+          right: 720px;
+          width: 170px;
+          padding: 10px;
+      
+          border-width: 8px;
+          border-style: solid;
+          border-image: url("https://file.garden/aXTkw7hiK3vn4ais/wrap.png") 8 fill round;
+    
+          background: white;
+          z-index: 999;
+        }
+    
+        .linkbutton-1 {
+          text-align: center;
+          background: #ffc6ee;
+          padding: 8px;
+          width: 100%; 
+          border: 2px outset #ffc6ee;
+          margin: 0 0 6px 0;
+          transition: 0.2s ease;
+        }
+    
+        .linkbutton-1:hover {
+          border: 2px inset #ffc6ee;
+        }
+    
+    
+        .linkbutton-1 a {
+          display: block;
+          color: white;
+          font-weight: bold;
+          text-decoration: none;
+          text-shadow: 
+            -2px 0  #ffafe7, 
+             0 2px  #ffafe7, 
+             2px 0  #ffafe7, 
+             0 -2px  #ffafe7;
+        }
+    
+        .linkbutton-header {
+        text-align: center;
+        background: ##57cbfe;
+        padding: 8px;
+        width: 100%;
+        border: 2px solid ##57cbfe; 
+        margin: 0 0 8px 0;
+        font-weight: bold;
+        color: white;
+        text-shadow: 
+            -2px 0  #2fc1fe, 
+             0 2px  #2fc1fe, 
+             2px 0  #2fc1fe, 
+             0 -2px  #2fc1fe;
+        }
+        
+        .floating-sidebar-small {
+        position: fixed;
+        top: 400px; 
+        right: 720px;
+        width: 170px;
+        padding: 10px;
+    
+        border-width: 8px;
+        border-style: solid;
+        border-image: url("https://file.garden/aXTkw7hiK3vn4ais/wrap.png") 8 fill round;
+    
+        background: white;
+        z-index: 999;
+    
+        overflow-y: auto;   
+      }
+    
+      
+      .floating-sidebar-small::-webkit-scrollbar {
+        width: 10px;
+      }
+    
+      .floating-sidebar-small::-webkit-scrollbar-thumb {
+        background: linear-gradient(90deg, #eee 38%, #ccc 62%);
+        border-radius: 5px;
+        border: 1px solid #888;
+      }
+      
+      .scrollbox-inner {
+      max-height: 100px; 
+      width:120px;
+      overflow-y: auto;      
+      padding: 5px;
+      margin-top: 5px;
+      margin-left: 5px;
+      margin-right: 5px;
+      border: 1px solid #ffc6ee;
+      border-radius: 5px;
+      background: #fff0f8;     
+      font-size: 12px;
+      line-height: 1.2em;
+      }
+      
+      .scrollbox-inner::-webkit-scrollbar {
+      width: 8px;
+      }
+      
+      .scrollbox-inner::-webkit-scrollbar-thumb {
+      background: linear-gradient(90deg, #eee 38%, #ccc 62%);
+      border-radius: 5px;
+      border: 1px solid #888;
+      }
+    
+      .wide-scroll {
+      width: calc(100% - 10px); 
+      max-height: 120px;         
+      overflow-y: auto;
+      padding: 10px;            
+      margin: 5px ;            
+      border: 1px solid #ffc6ee;
+      border-radius: 5px;
+      background: #fff0f8;
+      box-sizing: border-box;      
+      }
+      
+      ::-webkit-scrollbar {
+      width: 12px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #fff0f8;
+        border-radius: 10px;
+        border: 2px solid #ffc6ee;
+      }
+
+      ::-webkit-scrollbar-thumb {
+      background: linear-gradient(90deg, #eee 38%, #ccc 62%);
+      border-radius: 5px;
+      border: 1px solid #888;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(180deg, #ff8fd6, #ff6cc7);
+      }
+    
+        .wrapper {
+          margin: 10px auto;
+          width: 700px;
+          padding: 10px;
+          border-width: 8px;
+          border-style: solid;
+          border-image: url("https://file.garden/aXTkw7hiK3vn4ais/wrap.png") 8 fill round; 
+          transform: scale(0.8);
+          display: flex;
+          transform-origin: top center;
+          justify-content: space-between;
+          flex-direction: column;
+          
+        }
+    
+        header {
+          margin-bottom: 10px;
+          border-radius: 10px;
+          background-image: url(https://file.garden/aXTkw7hiK3vn4ais/headersj-draft-slightlymorepink.png);
+          width: 700px;
+          height: 100px;
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: auto;
+          text-align: center;
+          background-repeat: no-repeat;
+        }
+    
+        h1 {
+          font-family:  'Sweet Dreams', sans-serif;
+          filter: drop-shadow(0px 1px white) drop-shadow(0 -1px white) drop-shadow(1px 0 white) drop-shadow(-1px 0 white) drop-shadow(0px 1px #fe94b9) drop-shadow(0 -1px #fe94b9) drop-shadow(1px 0 #fe94b9) drop-shadow(-1px 0 #fe94b9);
+          color: #f44e99;
+          font-size: 60px;
+          margin-top: 10px;
+          margin-left: auto;
+          margin-bottom: auto;
+          font-weight: normal;
+          visibility:hidden;
+        }
+    
+    @font-face {
+      font-family: 'Sweet Dreams'; 
+      src: url('https://file.garden/aXTkw7hiK3vn4ais/Sweet%20Dreams.ttf') format('truetype');
+    }
+    
+    
+    
+        main {
+          display: flex;
+          flex direction: column;
+        }
+    
+        .sidebar {
+          width: 170px;
+        }
+    
+        .center {
+          flex: 1;
+          width: auto;
+          max-width:100%;
+          margin: 0 auto;
+          display: flex;
+          flex-direction: column !important;
+        }
+    
+        .sidebar .box {
+          padding: 10px;
+          margin-bottom: 10px;
+          background: white;
+        }
+
+    
+        h2 {
+          margin: 0;
+          padding: 5px;
+          font-size: 25px;
+          text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+          background: -webkit-linear-gradient(#00b5ff, #8dceff);
+          -webkit-background-clip: text;
+          -webkit-text-stroke: 4px transparent;
+          color: white;
+          font-family: Cavalhatriz;
+          color: white;
+        }
+        
+    @font-face {
+      font-family: 'Cavalhatriz'; 
+      src: url('https://file.garden/aXTkw7hiK3vn4ais/Cavalhatriz.ttf') format('truetype');
+    }
+    
+        .box {
+          background-image: var(--bg-box);
+          border: 5px solid var(--border);
+          border-image: url("https://file.garden/aXTkw7hiK3vn4ais/wrapbox.png") 3 round;
+          margin-bottom: 10px;
+          margin-right: 5px;
+          margin-left: 5px;
+          background-clip: padding-box;
+        }
+    
+        iframe {
+          border-radius: 0 0 10px 10px;
+        }
+    
+        .main {
+          padding: 10px;
+          border-radius: 10px;
+          background-image:url(https://file.garden/aXTkw7hiK3vn4ais/download9.gif);
+          background-size:cover;
+          background-position:center;
+          background-color: #ff9ed2;
+          background-blend-mode: screen;
+          display: block;
+        }
+        
+        .top-row {
+        display: flex;
+        gap: 5px;
+        margin-bottom: 1px !important;
+        }
+        
+        .bottom-content {
+        width: 100%;
+        margin-top: -2px !important;
+        }
+    
+        .container {
+          display: flex;
+          gap: 10px;
+          flex-wrap: wrap;
+        }
+        
+        .split-section {
+          gap: 2px; 
+        }
+    
+        .split-section .box {
+        margin-top: 5px; 
+        padding: 10px;
+        flex-direction: column;
+        }
+        
+        .split-section .col {
+        flex: 1; 
+        display: flex;
+        flex-direction: column;
+        }
+        
+        .split-section .box {
+        flex: 1;
+        margin-bottom: 0px; 
+        display: flex;
+        flex-direction: column;
+        }
+        
+      
+      .todo-box {
+       max-height: 135px;
+       overflow-y: auto;
+       }
+    
+    
+        .col {
+          flex: 1 1 0;
+          min-width: 0;
+        }
+    
+    
+        ul {
+          margin: 10px;
+          padding-left: 15px;
+        }
+       
+    
+      @keyframes float {
+        0% { transform: translate(0,  0px); }
+        50%  { transform: translate(0, 15px); }
+        100%   { transform: translate(0, -0px); }    
+        }
+        
+        .highlight {
+        color: #E05AAF; 
+    
+        }
+        
+        .full-img {    
+        width: 100%;
+        display: block;
+        transform: scale(0.8);
+        margin: 0;
+        }
+        
+        .deco {
+         position: fixed;      
+         z-index: 9999;       
+         pointer-events: none; 
+        }
+
+        .deco1 {
+        top: 320px;
+        right: 680px;
+        width: 90px;
+        }
+
+        .deco2 {
+        top: 500px;
+        right: 600px;
+        width: 430px;
+        }
+        
+        #widgetClose {
+        cursor: pointer;
+        background: white;
+        color: #00b5ff;
+        border: 1px solid white;
+        line-height: 12px;
+        padding: 2px 4px;
+        font-family: Arial, sans-serif; 
+        font-weight: bold;
+        font-size: 14px;
+        margin-right: 2px;
+        transition: 0.1s;
+      }
+
+      #widgetClose:hover {
+        background: #ffc6ee;
+        color: white;
+      }
+    
+      #myWidget {
+      position: fixed;
+      z-index: 10000;
+      top: 630px;
+      left: 710px;
+      width: 250px;
+      background-color: white;
+      border: 5px solid var(--border);
+      border-image: url("https://file.garden/aXTkw7hiK3vn4ais/wrapbox.png") 3 round;
+      box-shadow: 5px 5px 0px rgba(255, 105, 180, 0.3);
+      overflow: hidden; 
+    }
+    
+    #myWidgetHeader {
+    cursor: move;
+    padding: 5px;
+    background: -webkit-linear-gradient(#00b5ff, #8dceff);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+
+    #myWidgetHeader h2 {
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    -webkit-text-stroke: 2px transparent; /* Thinner stroke for small widget */
+    }
+    
+    .widget-content iframe {
+      display: block; /* Removes tiny gap at the bottom */
+      pointer-events: auto; /* Ensures you can still click 'Play' */
+    }
+    
+        /* ——————— ——————— */
+    </style>
+</head>
+
+<body>
+
+
+    <div class="wrapper">
+        <div class="floating-sidebar-small">
+        <div class="linkbutton-header"><h2>My Button!</h2></div>
+        <div style="text-align:center; margin-top:5px;">
+          <img src="https://file.garden/aXTkw7hiK3vn4ais/ezgif.com-animated-gif-maker%20(1).gif" width="88" height="31" alt="88x31 Button">
+        </div>
+
+
+        </div>
+        <div class="floating-sidebar">
+
+            <div class="inner">
+
+                <div class="linkbutton-header">
+                    ✧ MENU ✧
+                </div>
+
+                <div class="linkbutton-1">
+                    <a href="#">Home</a>
+                </div>
+
+                <div class="linkbutton-1">
+                    <a href="gallery.html">Gallery</a>
+                </div>
+
+                <div class="linkbutton-1">
+                    <a href="shrines.html">Shrine</a>
+                </div>
+
+                <div class="linkbutton-1">
+                    <a href="blog.html">Blog</a>
+                </div>
+
+                <div class="linkbutton-1">
+                    <a href="https://shoujoweb.atabook.org/">Guestbook</a>
+                </div>
+
+
+
+            </div>
+
+
+
+        </div>
+        
+        
+              <img src="https://file.garden/aXTkw7hiK3vn4ais/tumblr_87e76719a975d7d3b4918112ccf81801_6442d091_250.gif" alt="Play Music" onclick="togglePlayPause()" style="cursor: pointer; position:fixed; width:180px; right:-220px; margin-top:-60px; animation: float 4s linear infinite;">
+
+        <audio id="music" src="https://file.garden/aXTkw7hiK3vn4ais/KiiiKiii%20(%ED%82%A4%ED%82%A4)%20-%20Delulu%20Pack%20'UNDERDOGS%20(Instrumental)'.mp3" preload="auto"></audio>
+
+        <script>
+            var audio = document.getElementById('music');
+    
+            function togglePlayPause() {
+                if (audio.paused) {
+                    audio.play();
+                } else {
+                    audio.pause();
+                }
+            }
+        </script>
+
+
+
+        <header></header>
+
+        <main style="display: block;">
+    <div class="top-row" style="display: flex; gap: 10px; align-items: flex-start; margin-bottom: 10px;">
+        <div class="sidebar" style="width: 170px; flex-shrink: 0;">
+            <div class="box">
+                <h2>About Me</h2>
+                <img src="https://file.garden/aXTkw7hiK3vn4ais/5YLVMI7BNTBFMG4FIC4JZ26RVLPVQOBD.gif" style="margin:5px; width:120px;">
+                <div class="scrollbox-inner">  my name is <b>cici</b> ! i go by she/her and i was born during the recession ... (2008). i'm a big fan of magical girls, sanrio, kpop, and everything i think is cute!! <img src="https://swirl.neocities.org/sozai/mini/rabbitpixel.webp"/> </div>
+            </div>
+            
+            <div class="box todo-box">
+                <h2>To Do</h2>
+                <p><img src="https://swirl.neocities.org/sozai/mini/bow_1.gif" alt="description" style="vertical-align:middle; height: 1em;" /> Fix up homepage and add pngs</p>
+                <p><img src="https://swirl.neocities.org/sozai/mini/bow_1.gif" alt="description" style="vertical-align:middle; height: 1em;" /> Find more stuff to add to site</p>
+                <p><img src="https://swirl.neocities.org/sozai/mini/bow_1.gif" alt="description" style="vertical-align:middle; height: 1em;" /> FIgure out how to add a blog</p>
+                <p><img src="https://swirl.neocities.org/sozai/mini/bow_1.gif" alt="description" style="vertical-align:middle; height: 1em;" /> Take over the world</p>
+            </div>
+        </div>
+        <div class="center" style="flex: 1; min-width: 0;">
+            <div class="box main">
+                <center>
+                        <img src="https://file.garden/aXTkw7hiK3vn4ais/IUAS2ORGP2OUBHYNBK776AXVBO672ZZL.gif" style="margin:10px; width:100px;">
+                    </center>
+
+                    <p style="margin-bottom:20px; padding:1px; text-align:center;"><b><span class="highlight">Best viewed on desktop</span></b></p>
+                    <p style="margin-bottom:16px; padding:10px;"><b>welcome to my site that has all the things i like!
+                    
+          i've always been interested in the indie web but was too scared to try coding until now (which is 2026 at the time of writing)
+          ++ i  originally planned to make this site in 2025 but gave up . . .</b></p>
+          <p style="margin-bottom:1px; padding:10px;"><b>this website will always be a wip for the most part since i love finding new things to add or fix ♡
+          and there definitely will be bc my code is a mess unfortunately!!! but its okay.. (it's not...)</b></p>
+
+            </div>
+        </div>
+    </div>
+    <div class="bottom-content" style="clear: both; width: 100%;">
+        <div class="split-section" style="display: flex; gap: 10px;">
+            <div class="col" style="flex: 1;">
+                <div class="box">
+                    <h2>Webrings</h2>
+                    <div class="sanringo pompompurin">
+                     <a class="title" href="https://luckyatoll.nekoweb.org/sanringo.html">Sanrio Webring</a>
+                     <br>
+                     <a class="prev" href="https://luckyatoll.nekoweb.org/sanringo.html?action=previous"><img src="https://luckyatoll.nekoweb.org/images/pinkarrow.png"></a>
+                     <img class="character" src="https://64.media.tumblr.com/7e9cb421d4f8bd3fa07ba80b72d565e4/0844f92cf8f9405c-2d/s2048x3072/762f8a71ce2b2a35157a62d6c0621613649af706.pnj">
+                     <a class="next" href="https://luckyatoll.nekoweb.org/sanringo.html?action=next"><img src="https://luckyatoll.nekoweb.org/images/pinkarrow.png"></a>
+                     <br>
+                     <a class="info" href="https://luckyatoll.nekoweb.org/sanringo.html">what's this?</a>
+                    </div>
+                    <div id='kpop-webring'>
+                    <script type="text/javascript" src="https://purplehello98.neocities.org/kpopring/onionring-variables.js"></script>
+                    <script type="text/javascript" src="https://purplehello98.neocities.org/kpopring/onionring-widget.js"></script>
+                    </div>
+			
+                </div>
+            </div>
+            <div class="col" style="flex: 1;">
+                <div class="box">
+                    <h2>Fanlistings</h2>
+                    <div class="row">
+                    <div class="column">
+                    <a href="http://imaginary.nu/henshin/"><img src="https://henshin.anime.nu/codes/50x50_7.gif"></a>
+                    <a href="http://cloud.hatsukoi.org"><img src="https://file.garden/aXTkw7hiK3vn4ais/50-56.gif"></a>
+                    <a href="https://pkmn.redcrown.net/hoenn"><img src="https://file.garden/aXTkw7hiK3vn4ais/50x50-11.png"></a>
+                    <a href="https://fan.enamour.nu/ff"><img src="https://file.garden/aXTkw7hiK3vn4ais/e9173081ffba7a_50x50_9.png"></a>
+                    <a href="https://fan.enamour.nu/nana"><img src="https://i.ibb.co/pv1856MZ/6f162ce2274cb7-50x50-12.png"></a>
+                    <a href="https://fan.enamour.nu/ccs"><img src="https://i.ibb.co/N6vzYjQ6/50x50-9.png"></a>
+                    <a href="http://imaginary.nu/usagi/"><img src="https://usako.sailormoon.nu/images/codes/50x50_55.gif"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+            <center>
+          <p style="margin:5px; padding:20px; color:deeppink;"> 2026 © shoujoweb.neocities.org
+          <br><b>Magical Girl At Work! Under Construction</b>
+          </p>
+
+        </center>
+              
+              
+
+
+                
+                <img src="https://file.garden/aXTkw7hiK3vn4ais/SAILORANIME.gif" class="deco deco1">
+                
+                <img src="https://www.dropbox.com/scl/fi/nhzvq3dyazbo17k0jyn2w/ccs_render.png?rlkey=dq579pz8ckgizljtqe190dp5d&st=s3fku2kc&raw=1" class="deco deco2">
+                
+   
+
+                <div id="myWidget">
+                  <div id="myWidgetHeader">
+                    <h2>CiCiTube</h2>
+                    <span id="widgetClose" onclick="this.parentElement.parentElement.style.display='none'">×</span>
+                  </div>
+                  <div class="widget-content" style="padding: 0;"> <iframe 
+                      width="100%" 
+                      height="150" 
+                      src="https://www.youtube.com/embed/8iCop8SpCck?si=pFyD3wiqxg5tXIdc" 
+                      frameborder="0" 
+                      allow="autoplay; encrypted-media" 
+                      allowfullscreen>
+                    </iframe>
+                  </div>
+                </div>
+
+
+                    <script>
+                    dragElement(document.getElementById("myWidget"));
+
+                    function dragElement(elmnt) {
+                      var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+                      if (document.getElementById(elmnt.id + "Header")) {
+                        document.getElementById(elmnt.id + "Header").onmousedown = dragMouseDown;
+                      } else {
+                        elmnt.onmousedown = dragMouseDown;
+                      }
+
+                      function dragMouseDown(e) {
+                        e = e || window.event;
+                        e.preventDefault();
+                        pos3 = e.clientX;
+                        pos4 = e.clientY;
+                        document.onmouseup = closeDragElement;
+                        document.onmousemove = elementDrag;
+                      }
+
+                      function elementDrag(e) {
+                        e = e || window.event;
+                        e.preventDefault();
+                        pos1 = pos3 - e.clientX;
+                        pos2 = pos4 - e.clientY;
+                        pos3 = e.clientX;
+                        pos4 = e.clientY;
+                        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+                        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+                      }
+
+                      function closeDragElement() {
+                        document.onmouseup = null;
+                        document.onmousemove = null;
+                      }
+                    }
+                    </script>
+
+
+
+                    <script>
+                        document.addEventListener("DOMContentLoaded", () => {
+                      const audio = document.getElementById("tune");
+                      const playIcon = document.querySelector(".playy");
+                      const pauseIcon = document.querySelector(".pausee");
+                      const controls = document.querySelector(".music-controls");
+                    
+                      audio.oncanplaythrough = () => console.log("Audio loaded");
+                      audio.onerror = () => console.log("Audio failed");
+                    
+                      controls.addEventListener("click", () => {
+                        if (audio.paused) {
+                          audio.play();
+                          playIcon.style.display = "none";
+                          pauseIcon.style.display = "block";
+                        } else {
+                          audio.pause();
+                          playIcon.style.display = "block";
+                          pauseIcon.style.display = "none";
+                        }
+                      });
+                    });
+                    </script>
+
+
+  </main>
+</div>
+
+</body>
+</html>
