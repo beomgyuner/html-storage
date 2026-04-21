@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>underconstruction</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "MS Gothic", sans-serif;
+  background: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+#container {
+  width: 16em;
+  height: 10em;
+  background: white;
+  box-shadow: inset 10px 0px 6px -10px rgba(66,66,66,0.376), 
+              inset -10px 0px 6px -10px rgba(66,66,66,0.376), 
+              inset 0px 10px 6px -10px #ffffff, 
+              inset 0px -10px 6px -10px rgba(66,66,66,0.376);
+  border-radius: 0.8em;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.profile {
+  width: 6em;
+  border-radius: 0.5em;
+}
+
+button {
+  height: 2.1em;
+  font-family: "Poppins", sans-serif;
+  color: #9d9dca;
+  background: linear-gradient(0deg, rgba(226,226,255,1) 0%, rgba(250,250,255,1) 100%);
+  border: 1px solid #c7c7e1;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+.textbox, .more {
+  width: 53%;
+  height: 100%;
+  font-size: 10px;
+  line-height: 1.3;
+  border: 1px solid #c7c7e1;
+  border-radius: 0.5em;
+  padding: 9px;
+  overflow-y: scroll;
+}
+
+mark {
+  color: white;
+  font-weight: bold;
+  background: #dadaff;
+  padding: 0px 5px;
+  border-radius: 10em;
+}
+
+/* second section */
+.more {
+  height: 13.55em;
+  width: 12.3em;
+  position: absolute;
+  top: 12px;
+  right: 13px;
+  visibility: hidden;
+}
+</style>
+</head>
+
+<body>
+
+<div id="container">
+  <div class="left">
+    <img class="profile" src="https://file.garden/aXTkw7hiK3vn4ais/Chiffon.jpg">
+    <p>- cici</p>
+  </div>  
+
+  <div class="textbox">
+    this site is currently going thru some changes, try again later >_>
+  </div>
+</div>
+
+<div id="more" class="more">text</div>
+
+<script>
+var efeito = document.querySelector("button");
+var more = document.getElementById("more");
+
+efeito.addEventListener("mouseenter", hovered);
+efeito.addEventListener("mouseout", exit);
+
+function hovered() {
+  efeito.style.background = "linear-gradient(0deg, rgba(250,250,255,1) 0%, rgba(226,226,255,1) 100%)";
+}
+
+function exit() {
+  efeito.style.background = "linear-gradient(0deg, rgba(226,226,255,1) 0%, rgba(250,250,255,1) 100%)";
+}
+
+function toggleSection() {
+  efeito.style.background = "white";
+  
+  if (more.style.visibility === "visible") {
+    more.style.visibility = "hidden";
+  } else {
+    more.style.visibility = "visible";
+  }
+}
+</script>
+
+</body>
+</html>
